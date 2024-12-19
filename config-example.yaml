@@ -1,0 +1,68 @@
+aws:
+  default_region: eu-central-1
+tunnel-go-config:
+  placeholder: env # The value of this parameter will be used as the placeholder name
+  jumphost-filter: ${PLACEHOLDER}-autoscaled
+  services:
+    database:
+      host:
+        ssm_param: ""
+        value: "database-host.123abc.eu-central-1.rds.amazonaws.com"
+      remote-port:
+        ssm_param: ""
+        value: "3306"
+      local-port-range:
+        start: 5000
+        end: 5009
+      service-details: # Prefix for SSM parameters to fetch
+    database-ro-replica:
+      host:
+        ssm_param: ""
+        value: ""
+      remote-port:
+        ssm_param: ""
+        value: ""
+      local-port-range:
+        start: 5010
+        end: 5019
+    storage: 
+      host:
+        ssm_param: ""
+        value: "cache-host.123abc.ab.0001.euc1.cache.amazonaws.com"
+      remote-port:
+        ssm_param: ""
+        value: "6379"
+      local-port-range:
+        start: 5020
+        end: 5029
+    search:
+      host:
+        ssm_param: ""
+        value: "es-host-123abc.eu-central-1.es.amazonaws.com"
+      remote-port:
+        ssm_param: ""
+        value: "80"
+      local-port-range:
+        start: 5030
+        end: 5039
+    random1:
+      host:
+        ssm_param: ""
+        value: "random1-host.domain.com"
+      remote-port:
+        ssm_param: ""
+        value: "80"
+      local-port-range:
+        start: 5040
+        end: 5049
+    random2:
+      host:
+        ssm_param: ""
+        value: "random2-host.domain.com"
+      remote-port:
+        ssm_param: ""
+        value: "80"
+      local-port-range:
+        start: 5050
+        end: 5059
+
