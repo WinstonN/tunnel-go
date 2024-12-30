@@ -1,0 +1,70 @@
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Test binary, built with go test -c
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+bin/
+
+# Mac OS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows specific
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux specific
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+.env
+*.env
+
+# Binary files
+bin/
+dist/
+
+# Log files
+*.log
+
+# Local development configurations
+config.local.yaml
+*.local.yaml
+
+# Config files
+config.yaml
+!config-example.yaml
